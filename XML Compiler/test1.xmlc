@@ -1,0 +1,78 @@
+// Strings
+String hello = "hello"
+String helloCopy = hello
+String world = "world"
+String worldCopy
+worldCopy = world
+
+// Int
+Int zero = 0
+Int one = 1
+one += 1
+one -= 1
+Int minusOne = -1
+
+// Type conversion
+String two = "2"
+Int three = 3
+Int twoFromStr = (Int) two
+String threeFromInt = (String) three
+
+// If condition
+if three > twoFromStr {
+    print("Three more than two")
+} else {
+    print("Three less or equal two")
+}
+
+// Array
+[Int] arrayOfInts = [Int]()
+arrayOfInts.add(10)
+arrayOfInts.add(20)
+arrayOfInts.add(30)
+arrayOfInts.remove(2)
+Int zeroIndex = 0
+arrayOfInts.remove(zeroIndex)
+arrayOfInts.clear()
+arrayOfInts.add(20)
+arrayOfInts.add(40)
+arrayOfInts.add(80)
+
+// Loop
+for Int i in arrayOfInts {
+    print(i)
+}
+
+// Function
+String concatThreeStrings(String first, String second, String third) {
+    String result = first
+    result += second
+    result += third
+    Void funcInFunc() {
+        print("test")
+        for Int tmp in arrayOfInts {
+            print(tmp)
+            if three > twoFromStr {
+                print("Three more than two")
+            } else {
+                print("Three less or equal two")
+            }
+        }
+    }
+    return result
+}
+String funcResult
+funcResult = concatThreeStrings("Hello ", world, "!")
+
+// XML
+Node testNode = Node("testNodeName")
+Node childNode = Node("childNodeName")
+testNode.addChild(childNode)
+[Node] testNodeChildren = testNode.children
+Document doc = Document(testNode)
+Attribute attr = Attribute("key", "value")
+Attribute attr2
+attr2.name = "hello"
+attr2.value = "world"
+testNode.addAttribute(attr)
+[Attribute] attrs = testNode.attributes
